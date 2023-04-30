@@ -1,0 +1,47 @@
+---
+layout: default
+---
+<article class="hero">
+  <div id="hero-before" style="
+  background: url(https://images.unsplash.com/photo-1682608166574-5dbd53ed1b47?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80); 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  filter: brightness(30%);"></div>
+  <div class="hero-content">
+
+
+  <h1 class="hero-title">
+    {{ page.title | escape }}
+  </h1>
+
+  <div class="hero-subtitle">
+      <div class="grid">
+          <div class="col-6" id="author">
+              <img height="35" class="mr-3" src="https://avatars.githubusercontent.com/u/30801951?v=4" alt="Avatar">
+              <span>{{ page.author }}</span>
+          </div>
+          <div class="col-6" id="date">
+              <!-- <i class="fa-solid fa-calendar mr-3" style="height: 40px; vertical-align:middle;"></i> -->
+              <span>{{ page.date | date: date_format }}</span>
+          </div>
+      </div>
+  
+  </div>  
+  </div>
+
+</article>
+
+<div class="container markdown-article">
+  <div class="grid">
+      <div>
+          {{content}}
+      </div>
+  </div>
+</div>

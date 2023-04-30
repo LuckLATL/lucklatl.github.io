@@ -1,0 +1,104 @@
+---
+layout: default
+---
+
+<!--
+<div class="home">
+  {%- if page.title -%}
+    <h1 class="page-heading">{{ page.title }}</h1>
+  {%- endif -%}
+
+  {{ content }}
+
+  {%- if site.posts.size > 0 -%}
+    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
+    <ul class="post-list">
+      {%- for post in site.posts -%}
+      <li>
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        <span class="post-meta">{{ post.date | date: date_format }}</span>
+        <h3>
+          <a class="post-link" href="{{ post.url | relative_url }}">
+            {{ post.title | escape }}
+          </a>
+        </h3>
+        {%- if site.show_excerpts -%}
+          {{ post.excerpt }}
+        {%- endif -%}
+      </li>
+      {%- endfor -%}
+    </ul>
+
+    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+  {%- endif -%}
+
+</div>
+-->
+
+<div id="body">
+  <div class="background">
+      <ng-lottie style="width: 100%; object-fit: contain;" [options]="options"></ng-lottie>
+  </div>
+  <div class="hero-banner">
+      <div class="hero-content">   
+          <div>
+              <div class="hero-pre-intro">
+                  OBERHOLZER IT
+              </div>
+              <div class="hero-title">
+                  The blog about
+                  <br/>
+                  <div id="typewriter" style="display: inline;"></div>
+              </div> 
+              <div class="hero-subtitle text-400">
+                  Diving deep into the world of computer science, one bit at a time.
+              </div>
+              <a (click)="scrollTo('articles')">
+                  <div class="mt-5 text-4xl continue-arrow">
+                      <i class="fa-solid fa-angle-down"></i>
+                  </div>
+              </a> 
+              
+          </div>     
+      </div>
+  </div>
+
+
+  <div class="container">
+
+      <div class="blur">
+
+      </div>
+
+      <div id="articles" class="">
+        {%- for post in site.posts -%}
+        <div class="flex font-bold border-round card-container d-flex justify-content-center">
+          <div class="blog-card" (click)="openArticle()">
+      
+                  <div class="article-background-image" style="background-image: url({{post.hero-image}});"></div>
+                  
+                  <div class="tags">
+                  </div>
+
+                  <p class="article-title">
+                      <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+                  </p>
+      
+                  <p class="additional-information mb-2">
+                      <i class="fa-solid fa-circle-user mr-2"></i>
+                      <a class="author ml-1" (click)="openAuthor(); $event.stopPropagation()">Lukas Oberholzer</a>
+                      <i class="fa-solid fa-calendar ml-4 mr-2"></i>
+                      {{ post.date | date: date_format }}
+                  </p>
+      
+                  <p class="content">
+                    {{ post.excerpt }}
+                  </p>
+      
+          </div>
+      </div>
+      {%- endfor -%}
+      
+      </div>
+  </div>
+</div>
