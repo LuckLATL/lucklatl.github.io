@@ -6,6 +6,7 @@ author: Lukas Oberholzer
 tags: []
 description: More and more sensitive data is being sent over the Internet. Banks, shopping sites, e-mail clients. All this data is (often) protected by encryption and is considered secure. However, a key for decryption must be defined for the exchange of data. And it is precisely this key that is involved in a brute force attack.
 image: "/assets/posts/brute-force-attacks-explained/cover.png"
+usemathjax: true
 ---
 
 In the era of the digital revolution, the flow of data is growing exponentially. Likewise, more and more sensitive data is being sent over the Internet. Banks, shopping sites, e-mail clients. They all use the so-called World Wide Web (also called www for short) and send sensitive data over it. All this data is (often) protected by encryption and is considered secure. However, a key for decryption must be defined for the exchange of data. And it is precisely this key that is involved in a brute force attack.

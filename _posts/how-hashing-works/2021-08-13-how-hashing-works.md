@@ -6,6 +6,7 @@ author: Lukas Oberholzer
 tags: [Cryptography, A Deeper Look]
 description: Hashing is a very important topic in today’s computer science. And it is becoming more and more important. Databases are based on it and logins become more secure. But what exactly is a hash and why is it so important?
 image: "/assets/posts/how-hashing-works/cover.png"
+usemathjax: true
 ---
 
 Hashing is a very important topic in today’s computer science. And it is becoming more and more important. Databases are based on it and logins become more secure. But what exactly is a hash and why is it so important?
@@ -53,7 +54,7 @@ With a hash function, however, the original information cannot be made readable 
 For most people (also programmers sometimes) a hash function is a black box. You use it every day, but most of the time you have no idea how it works. In the following section it will be explained as understandable as possible what a hash algorithm does exactly with the single bits. However, it should be noted that this does not apply to all algorithms, as they are constantly being developed further to withstand attacks. There are many different ways a hash algorithm can form a hash. Here is an explanation of one of them.
 
 ### Starting point
-Let’s take any bit sequence with a length of L (L here stands for any length). That means, there are 2^L possibilities how the bit sequence could look like (One bit has state 0 or 1).
+Let’s take any bit sequence with a length of L (L here stands for any length). That means, there are $$2^L$$ possibilities how the bit sequence could look like (One bit has state 0 or 1).
 
 ### Objective
 Now the bit sequence with length L is to be converted into a previously defined length S of bits.

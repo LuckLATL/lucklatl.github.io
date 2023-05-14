@@ -7,6 +7,7 @@ author: Lukas Oberholzer
 tags: [Windows, Exploit]
 description: Many security vulnerabilities exist in Microsoft Windows, and new ones are being found constantly. This article explains how to add a new user on Windows though an exploit which already exists for years.
 image: "/assets/posts/privilege-escalation/cover.png"
+usemathjax: true
 ---
 
 Many security vulnerabilities exist in Microsoft Windows, and new ones are being found constantly. This article explains how to add a new user on Windows though an exploit which already exists for years. 
