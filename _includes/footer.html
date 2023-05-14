@@ -1,35 +1,46 @@
-<footer class="site-footer h-card">
-  <data class="u-url" href="{{ "/" | relative_url }}"></data>
-
-  <div class="wrapper">
-
-    <h2 class="footer-heading">{{ site.title | escape }}</h2>
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li class="p-name">
-            {%- if site.author -%}
-              {{ site.author | escape }}
-            {%- else -%}
-              {{ site.title | escape }}
-            {%- endif -%}
-            </li>
-            {%- if site.email -%}
-            <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-            {%- endif -%}
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-2">
-        {%- include social.html -%}
-      </div>
-
-      <div class="footer-col footer-col-3">
-        <p>{{- site.description | escape -}}</p>
-      </div>
-    </div>
-
-  </div>
-
+<footer class="footer">
+  <a class="footer_item" href="/thanks">ack.</a>
+  <a class="footer_item" href="javascript::void(0)">resume</a>
+  <a class="footer_item" href="/feed.xml">rss</a>
+  <span class="footer_item">&copy; {{ site.time | date: "%Y" }}</span>
+  <small class="footer_copyright">
+    <!-- Klisé Theme: https://github.com/piharpi/jekyll-klise -->
+    <a
+      href="https://github.com/piharpi/jekyll-klise"
+      target="_blank"
+      rel="noreferrer noopener"
+      >klisé</a
+    >
+    theme on
+    <a href="https://jekyllrb.com" target="_blank" rel="noreferrer noopener"
+      >jekyll</a
+    >
+  </small>
 </footer>
+<script src="/assets/js/main.js" defer="defer"></script>
+{%- if site.google_analytics -%}
+  <!-- Google tag (gtag.js) -->
+  <script
+  async
+  src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "{{ site.google_analytics }}");
+  </script>
+{%- endif -%}
+{%- if page.url == '/archive/' -%}
+  <script src="/assets/js/search.min.js"></script>
+  <script>
+    var sjs = SimpleJekyllSearch({
+      searchInput: document.getElementById('search-input'),
+      resultsContainer: document.getElementById('search-results'),
+      json: '/assets/search.json',
+    });
+  </script>
+{%- endif -%}

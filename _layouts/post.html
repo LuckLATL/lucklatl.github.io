@@ -1,47 +1,94 @@
 ---
-layout: default
+layout: compress
 ---
-<article class="hero">
-  <div id="hero-before" style="
-  background: url(https://images.unsplash.com/photo-1682608166574-5dbd53ed1b47?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80); 
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  max-width: 100%;
-  height: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  filter: brightness(30%);"></div>
-  <div class="hero-content">
 
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-  <h1 class="hero-title">
-    {{ page.title | escape }}
-  </h1>
+{% include header.html %}
 
-  <div class="hero-subtitle">
-      <div class="grid">
-          <div class="col-6" id="author">
-              <img height="35" class="mr-3" src="https://avatars.githubusercontent.com/u/30801951?v=4" alt="Avatar">
-              <span>{{ page.author }}</span>
+<body data-theme="{{ site.mode }}" class="notransition">
+
+  <script>
+    const body = document.body;
+    const data = body.getAttribute("data-theme");
+
+    const initTheme = (state) => {
+      if (state === "dark") {
+        body.setAttribute("data-theme", "dark");
+      } else if (state === "light") {
+        body.removeAttribute("data-theme");
+      } else {
+        localStorage.setItem("theme", data);
+      }
+    };
+ 
+    initTheme(localStorage.getItem("theme"));
+    
+    setTimeout(() => body.classList.remove("notransition"), 75);
+  </script>
+
+  {% include navbar.html %}
+  <div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+      <article itemscope itemtype="https://schema.org/BlogPosting">
+
+        <header class="header">
+          {% if page.tags and page.tags != empty %}
+          <div class="tags">
+            {% assign tags = page.tags %}
+            <span itemprop="keywords">
+              {% for tag in tags %}
+              <a class="tag"
+                href="/tags/#{{tag | downcase | slugify}}">{{tag | upcase }}</a>{% unless forloop.last %},{% endunless %}
+              {% endfor %}
+            </span>
           </div>
-          <div class="col-6" id="date">
-              <!-- <i class="fa-solid fa-calendar mr-3" style="height: 40px; vertical-align:middle;"></i> -->
-              <span>{{ page.date | date: date_format }}</span>
+          {% endif %}
+          <h1 class="header-title" itemprop="headline">{{ page.title | escape }}</h1>
+          {% if page.date %}
+          <div class="post-meta">
+            <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+              {{ page.date | date: "%b %d, %Y" }}
+            </time>
+            <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+              <span itemprop="name">{{ site.author.name }}</span>
+            </span>
+            <time hidden datetime="{{ page.modified | date_to_xmlschema }}" itemprop="dateModified">
+              {{ page.date | date: "%b %d, %Y" }}
+            </time>
+            <span hidden itemprop="publisher" itemtype="Person">{{ site.author.name }}</span>
+            <span hidden itemprop="image">{{ page.image }}</span>
+            <span hidden itemprop="mainEntityOfPage">{{ page.excerpt }}</span>
           </div>
-      </div>
-  
-  </div>  
-  </div>
+          {% endif %}
+        </header>
 
-</article>
+        <div class="page-content" itemprop="articleBody">
+          {% include anchor_headings.html html=content anchorClass="anchor-head" beforeHeading=true h_min=1 h_max=4 %}
+          {% if page.tweet %}
+          <p>Comments this article on 
+            <a href="https://twitter.com/{{site.twitter}}/status/{{page.tweet}}">Twitter</a>.
+          </p>
+          {% endif %}
+        </div>
+      </article>
+    
+      {% if page.comments %}
+        {% include comments.html %}
+      {% endif %}
 
-<div class="container markdown-article">
-  <div class="grid">
-      <div>
-          {{content}}
-      </div>
+    </main>
+
+    {% if page.modified %}
+      <small class="post-updated-at">updated_at {{page.modified | date: "%d-%m-%Y"}}</small>
+    {% endif %}
+    {% if page.next or page.previous %}
+      {% include navigation.html %}
+    {% endif %}
+
+    {% include footer.html %}
   </div>
-</div>
+</body>
+
+</html>
