@@ -29,7 +29,7 @@ pre.highlight, pre {
   }
   border: 1px solid rgba(128,128,128,0.1);
   background-color: #1a1b21;
-  border-radius: 2px;
+  border-radius: 10px;
   padding: 10px;
   display: block;
   overflow-x: auto;
@@ -43,6 +43,15 @@ pre.highlight, pre {
     display: block;
     border: 0;
   }
+}
+
+pre.highlight::-webkit-scrollbar, pre::-webkit-scrollbar {
+  height: 10px;
+  border-radius: 10px;
+}
+
+pre.highlight::-webkit-scrollbar-track, pre::-webkit-scrollbar-track {
+  border-radius: 10px;
 }
 
 .highlight table td {

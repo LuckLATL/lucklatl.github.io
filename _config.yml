@@ -1,31 +1,29 @@
 # Site settings
-title: Klise Theme # site title
+title: Oberholzer.it # site title
 description: >- # site description
-  He's writing in Bahasa about web technology and experience as a journal 
-  for documentation things that he learned, meet him <a href="https://github.com/piharpi" target="_blank" rel="noopener">@github</a>.
+  A blog about advanced concepts in computer science, including topics related to cyber security and low level programming. Explore the inner workings of computer science and gain a deeper understanding of key concepts with in-depth analysis and explanation.
 lang: en-US # default lang
-timezone: Asia/Jakarta # set your timezone
+timezone: Europe/Zurich # set your timezone
 image: assets/img/ogp.png # This image used for Open Graph more info https://ogp.me/
-repo: https://github.com/piharpi/jekyll-klise # site repo [optional]
+repo: https://github.com/LuckLATL/lucklatl.github.io # site repo [optional]
 mode: dark # default theme "dark" | "light"
 
 # Profile settings
 author:
-  name: Jekyll Klisé # author name
+  name: Oberholzer.it # author name
   bio: >- # tell to the world
-    The minimalist Jekyll theme, light and dark mode support, for running a personal site and blog, 
-    meet Klisé theme at <a href="https://github.com/piharpi/jekyll-klise" target="_blank" rel="noopener">@github</a>.
-  username: username # general username
-  github: github_username # github username
-  twitter: twitter_username # twitter username
-  facebook: facebook_username # facebook username
-  email: your-email@email.com # email adress
-  avatar: /assets/img/avatar.jpg # change with your own avatar
+    Hey there! Join in on the exciting journey through the realms of code and cybersecurity, where we unlock the power to protect and conquer the virtual frontier.
+  username: Luck_LATL # general username
+  github: lucklatl # github username
+  # twitter: twitter_username # twitter username
+  # facebook: facebook_username # facebook username
+  email: blog@oberholzer.it # email adress
+  avatar: /assets/img/avatar_common.png # change with your own avatar
 
 # URL settings
-url: "https://klise.now.sh" #
+url: "https://oberholzer.it" #
 baseurl:
-permalink: /:title/
+permalink: /posts/:title/
 google_analytics: # leave it blank if not wish
 fb_appid:
 
