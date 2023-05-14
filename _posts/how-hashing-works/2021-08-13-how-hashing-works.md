@@ -3,9 +3,9 @@ layout: post
 title:  "How Hashing Works | Deeper Look"
 date:   2021-08-13 07:42:58 +0200
 author: Lukas Oberholzer
-author-avatar-uri: https://avatars.githubusercontent.com/u/30801951?v=4
-categories: jekyll updat
-hero-image: https://images.unsplash.com/photo-1667124060133-c1074b0124be?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80
+tags: [Cryptography, A Deeper Look]
+description: Hashing is a very important topic in today’s computer science. And it is becoming more and more important. Databases are based on it and logins become more secure. But what exactly is a hash and why is it so important?
+image: "/assets/posts/how-hashing-works/cover.png"
 ---
 
 Hashing is a very important topic in today’s computer science. And it is becoming more and more important. Databases are based on it and logins become more secure. But what exactly is a hash and why is it so important?

@@ -4,9 +4,9 @@ title:  "Privilege Escalation On Windows"
 date:   2022-04-25 14:33:58 +0200
 modified: 2022-04-25 14:33:58 +0200
 author: Lukas Oberholzer
-tags: []
-description: description placeholder
-image: "/assets/posts/unknown.png"
+tags: [Windows, Exploit]
+description: Many security vulnerabilities exist in Microsoft Windows, and new ones are being found constantly. This article explains how to add a new user on Windows though an exploit which already exists for years.
+image: "/assets/posts/privilege-escalation/cover.png"
 ---
 
 Many security vulnerabilities exist in Microsoft Windows, and new ones are being found constantly. This article explains how to add a new user on Windows though an exploit which already exists for years. 

@@ -3,14 +3,12 @@ layout: post
 title:  "Brute-Force Attacks Explained"
 date:   2021-12-06 12:55:58 +0200
 author: Lukas Oberholzer
-author-avatar-uri: https://avatars.githubusercontent.com/u/30801951?v=4
-categories: jekyll updat
-hero-image: https://images.unsplash.com/photo-1566937169390-7be4c63b8a0e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80
+tags: []
+description: More and more sensitive data is being sent over the Internet. Banks, shopping sites, e-mail clients. All this data is (often) protected by encryption and is considered secure. However, a key for decryption must be defined for the exchange of data. And it is precisely this key that is involved in a brute force attack.
+image: "/assets/posts/brute-force-attacks-explained/cover.png"
 ---
 
-In the era of the digital revolution, the flow of data is growing exponentially. Likewise, more and more sensitive data is being sent over the Internet. Banks, shopping sites, e-mail clients. They all use the so-called World Wide Web (also called www for short) and send sensitive data over it.
-
-All this data is (often) protected by encryption and is considered secure. However, a key for decryption must be defined for the exchange of data. And it is precisely this key that is involved in a brute force attack.
+In the era of the digital revolution, the flow of data is growing exponentially. Likewise, more and more sensitive data is being sent over the Internet. Banks, shopping sites, e-mail clients. They all use the so-called World Wide Web (also called www for short) and send sensitive data over it. All this data is (often) protected by encryption and is considered secure. However, a key for decryption must be defined for the exchange of data. And it is precisely this key that is involved in a brute force attack.
 
 # What is a Brute-Force Attack?
 A brute force attack is the name for a type of attack that is usually carried out by hackers in order to obtain passwords or password-protected content.

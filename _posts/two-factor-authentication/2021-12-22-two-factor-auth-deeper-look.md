@@ -3,10 +3,10 @@ layout: post
 title:  "Two-Factor Authentication | Deeper Look"
 date:   2021-12-22 20:42:58 +0200
 author: Lukas Oberholzer
-author-avatar-uri: https://avatars.githubusercontent.com/u/30801951?v=4
-categories: jekyll updat
-hero-image: https://images.unsplash.com/photo-1563191911-e65f8655ebf9
 usemathjax: true
+tags: [Cryptography, A Deeper Look]
+description: Nowadays with a world full of hackers and scammers trying to steal ones data, our online security needs to be constantly improved. One way to do this, is through two-factor authentication. Today we will have a look at why a second factor for a login is important and how it works in the backend.
+image: "/assets/posts/two-factor-authentication/cover.png"
 ---
 
 Nowadays with a world full of hackers and scammers trying to steal ones data, our online security needs to be constantly improved. One way to do this, is through two-factor authentication. Today we will have a look at why a second factor for a login is important and how it works in the backend.
